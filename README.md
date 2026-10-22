@@ -18,18 +18,19 @@ Powered by a single-stage **YOLOv8** detector and an asynchronous **FastAPI** ba
 
 ## 🛠️ System Architecture
 
+```text
 [ Laparoscopic Stream ] ➔ [ OpenCV Preprocessing (320x320 & Frame Skip) ]
-	│
-	▼
-[ YOLOv8 Tensor Inference ]
-	│
-	▼
-[ Active Visual Box Overlay ]
-	│
-	▼
-[ Asynchronous FastAPI Clinical Dashboard ]
+                                 │
+                                 ▼
+                       [ YOLOv8 Tensor Inference ]
+                                 │
+                                 ▼
+                    [ Active Visual Box Overlay ]
+                                 │
+                                 ▼
+               [ Asynchronous FastAPI Clinical Dashboard ]
 
-
+```
 ---
 
 ## 📊 Performance Benchmark
@@ -51,14 +52,14 @@ Powered by a single-stage **YOLOv8** detector and an asynchronous **FastAPI** ba
 ```bash
 
 pip install -r requirements.txt
+```
+### 2. Run the Dashboard
 
-2. Run the Dashboard
-
-Bash
+```Bash
 
 uvicorn main:app --reload
-
+```
 Open your browser and navigate to http://127.0.0.1:8000 to access the clinical dashboard.
 
-📜 License
+### 📜 License
 Distributed under the MIT License.
